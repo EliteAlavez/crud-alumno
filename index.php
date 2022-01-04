@@ -25,9 +25,9 @@
                             <h1>Ingrese datos</h1>
                                 <form action="insertar.php" method="POST">
 
-                                    <input type="text" class="form-control mb-3" name="cod_estudiante" placeholder="cod estudiante">
-                                    <input type="text" class="form-control mb-3" name="dni" placeholder="Dni">
-                                    <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres">
+                                    <input type="text" class="form-control mb-3" name="cod_estudiante" placeholder="Numero de control">
+                                    <input type="text" class="form-control mb-3" name="dni" placeholder="CURP">
+                                    <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombre Completo">
                                     <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos">
                                     
                                     <input type="submit" class="btn btn-primary">
