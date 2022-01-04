@@ -32,16 +32,23 @@
                                     
                                     <input type="submit" class="btn btn-primary">
                                 </form>
+                                <div class="btn-toolbar"> 
+        <button type="button" class="btn btn-success my-5 mr-5" data-toggle="modal" onclick="">
+          Mostrar XML
+        </button>
+        <button type="button" class="btn btn-info my-5 mr-5" data-toggle="modal"  onclick="" >
+          Mostrar JSON
+        </button>
                         </div>
-
+</div>
                         <div class="col-md-8">
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
-                                        <th>Codigo</th>
-                                        <th>Dni</th>
-                                        <th>Nombres</th>
-                                        <th>pellidos</th>
+                                        <th>Numero de Control</th>
+                                        <th>CURP</th>
+                                        <th>Nombre Completo</th>
+                                        <th>Apellidos</th>
                                         <th></th>
                                         <th></th>
                                     </tr>
@@ -49,7 +56,9 @@
 
                                 <tbody>
                                         <?php
-                                            while($row=mysqli_fetch_array($query)){
+                                        $Data=Array();
+                                            while($row=mysqli_fetch_array($query)){ 
+                                                array_push($Data,$row);
                                         ?>
                                             <tr>
                                                 <th><?php  echo $row['cod_estudiante']?></th>
@@ -60,7 +69,7 @@
                                                 <th><a href="delete.php?id=<?php echo $row['cod_estudiante'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
                                             </tr>
                                         <?php 
-                                            }
+                                            } echo json_encode($Data);
                                         ?>
                                 </tbody>
                             </table>
