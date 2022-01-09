@@ -33,9 +33,9 @@
                                     <input type="submit" class="btn btn-primary">
                                 </form>
                                 <div class="btn-toolbar"> 
-        <button type="button" class="btn btn-success my-5 mr-5" data-toggle="modal" onclick="">
+                                <a  class="btn btn-info my-5 mr-5"  href="xml.php" data-toggle="modal"  onclick="" >
           Mostrar XML
-        </button>
+</a>
         <a  class="btn btn-info my-5 mr-5"  href="json.php" data-toggle="modal"  onclick="" >
           Mostrar JSON
 </a>
